@@ -18,8 +18,7 @@ int find_length(const char *string) {
 int find_size(char *filename) {
     FILE *fp = fopen(filename, "r");
     int i = 0;
-    char c;
-    while ((c = (char) fgetc(fp)) != EOF) {
+    while (((char) fgetc(fp)) != EOF) {
         i++;
     }
     fclose(fp);
@@ -139,6 +138,7 @@ void encode(char *message, char *key) {
         // print columns as if they were strings
         printf("%s",array[i]);
     }
+    printf("\n");
 }
 
 /*
